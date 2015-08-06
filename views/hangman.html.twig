@@ -13,17 +13,21 @@
         <pre>       / \          |     </pre>
         <pre>      /   \         |     </pre>
         <pre>                ____|____ </pre>
-        {% if bool_array is empty %}
+        {% if word_array is empty %}
         <form action='/start_game'>
             <button type='success'>Begin game</button>
         </form>
         {% else %}
             <p>
-                {% for space in bool_array %}
+                {% for letter in word_array %}
                 _
                 {% endfor %}
             </p>
-            <form action
+            <form action='/hangman' method='post'>
+                <label for='guess'>Enter your guess</label>
+                <input id='guess' name='guess' type='text'>
+                <button type='submit'>Submit</button>
+            </form>
         {% endif %}
     </body>
 </html>

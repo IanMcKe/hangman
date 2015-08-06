@@ -17,7 +17,8 @@
         {
         return $this->word;
         }
-
+/* Since we're hard coding the correct word we don't need these.  But if we wanted to have a form
+   for someone to enter the word they want to be the answer; we would need these functions.
         function save()
         {
             array_push($_SESSION['list_of_guesses'], $this);
@@ -32,7 +33,7 @@
         {
             $_SESSION['list_of_guesses'] = array();
         }
-
+*/
         function numSpaces()
         {
             $n_spaces = strlen($this->word);
@@ -49,4 +50,6 @@
             return $word_array;
         }
     }
+
+
 ?>
