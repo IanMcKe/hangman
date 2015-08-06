@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Hangman!</title>
+    </head>
+    <body>
+        <pre>        _____________     </pre>
+        <pre>        |           |     </pre>
+        <pre>       / \          |     </pre>
+        <pre>       \ /          |     </pre>
+        <pre>        |           |     </pre>
+        <pre>      -----         |     </pre>
+        <pre>        |           |     </pre>
+        <pre>       / \          |     </pre>
+        <pre>      /   \         |     </pre>
+        <pre>                ____|____ </pre>
+        {% if bool_array is empty %}
+        <form action='/start_game'>
+            <button type='success'>Begin game</button>
+        </form>
+        {% else %}
+            <p>
+                {% for space in bool_array %}
+                _
+                {% endfor %}
+            </p>
+            <form action
+        {% endif %}
+    </body>
+</html>
